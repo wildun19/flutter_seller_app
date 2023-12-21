@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_seller_app/bloc/add_image/add_image_bloc.dart';
+import 'package:flutter_seller_app/bloc/bloc/add_product_bloc.dart';
 import 'package:flutter_seller_app/bloc/categories/categories_bloc.dart';
 import 'package:flutter_seller_app/bloc/products/products_bloc.dart';
 import 'package:flutter_seller_app/pages/dashboard/seller_dashboard_page.dart';
@@ -14,6 +16,22 @@ import 'utils/light_themes.dart';
 void main() {
   runApp(const MyApp());
 }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+//         useMaterial3: true,
+//       ),
+//       home: const SellerDashboardPage(),
+//     );
+//   }
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -36,6 +54,12 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CategoriesBloc(),
+        ),
+        BlocProvider(
+          create: (context) => AddImageBloc(),
+        ),
+        BlocProvider(
+          create: (context) => AddProductBloc(),
         ),
       ],
       child: MaterialApp(

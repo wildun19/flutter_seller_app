@@ -43,6 +43,8 @@ dependencies:
   fluttertoast: ^8.2.4
   flutter_svg: ^2.0.5
   money_formatter: ^0.0.4
+  image_picker: ^1.0.4
+  bloc: ^8.1.2
 
 dev_dependencies:
   flutter_test:
